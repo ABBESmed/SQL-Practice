@@ -23,3 +23,12 @@ SET age = 29
 WHERE id = 1;
 
 COMMIT; -- meaning: COMMIT = save the changes permanently.
+
+-- ROLLBACK = ROLLBACK cancels changes made since the last COMMIT.
+SET AUTOCOMMIT = 0;
+
+UPDATE users
+SET age = 29
+WHERE id = 1;
+
+ROLLBACK; -- ROLLBACK = undo the changes.
