@@ -45,5 +45,5 @@ It's one table, but you're looking at it in two different ways.
 
 SELECT e.name, m.name -- Choose what you want to display: e.name = employee’s name , m.name = manager’s name
 FROM employees AS e -- Use the employees table and temporarily call it e.
-JOIN employees AS m
-ON e.manager_id = m.id;
+JOIN employees AS m -- Use the same table again, but temporarily call it m.
+ON e.manager_id = m.id; -- match employee’s manager_id = manager’s id
